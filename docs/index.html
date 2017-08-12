@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>babel_sample - Babel教学文档</title>
+    <meta name="description" content="Babel教学文档">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+    <style lang="css">
+      .a123{ display: none;}
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+</body>
+<script>
+  window.$docsify = {
+    el: '#app',
+    repo: 'liyanlong/babel_sample',
+    router: true,
+    maxLevel: 4,
+    loadNavbar: '_navbar.md',
+    plugins: [
+      function(hook, vm) {
+        hook.beforeEach(function (html) {
+          var url = 'https://github.com/liyanlong/babel_sample/blob/master/docs/' + vm.route.file
+          var editHtml = '[:memo: Edit Document](' + url + ')\n'
+          return editHtml
+            + html
+            + '\n----\n'
+            + editHtml
+        })
+    }]
+  }
+</script>
+<script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+<script src="//unpkg.com/docsify/lib/plugins/external-script.min.js"></script>
+</html>

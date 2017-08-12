@@ -1,0 +1,24 @@
+{
+  "name": "babel_sample",
+  "version": "1.0.0",
+  "description": "a guided learning babel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "node ./docs.js",
+    "build": "babel src --out-dir build"
+  },
+  "keywords": [
+    "babel",
+    "es2015"
+  ],
+  "author": "liyl",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-regenerator": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "serve-static": "^1.12.4"
+  }
+}

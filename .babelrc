@@ -1,0 +1,6 @@
+{
+  "presets": [
+    // default without options runs all behavior is babel-preset-latest
+    ["env"]
+  ]
+}
