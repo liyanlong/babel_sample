@@ -1,0 +1,7 @@
+{
+  "presets": [
+    // default without options runs all behavior is babel-preset-latest
+    ["env"]
+  ],
+  "plugins": ["syntax-async-generators"]
+}
