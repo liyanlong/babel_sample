@@ -1,0 +1,7 @@
+{
+  "plugins": [
+    ["transform-es2015-block-scoping", {
+      "throwIfClosureRequired": true
+    }]
+  ]
+}

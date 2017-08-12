@@ -60,11 +60,17 @@ console.log(sum1, sum2);
 ```
 
 # 学习 ES2015
-> 基于 Luke Hoban's 的  [`es6features`](https://github.com/lukehoban/es6features#readme) 仓库
 
 ## 介绍
+> ECMAScript2015 是在2015年6月制定的JS标准, 也称之为ES6. 上一代ES5发布的时候还是在2009年.
+
+如果你想查看当前的浏览器支持程度, <a href="https://kangax.github.io/compat-table/es6/" target="_blank">点击此处访问.</a>
 
 ## ES2015新特性
 
 1. [arrow-functions](/plugins/transform-es2015-arrow-functions.md)
 2. [async-functions](/plugins/syntax-async-functions.md)
+3. [async-generator-functions](/plugins/syntax-async-generators.md)
+4. [block-scoping](/plugins/transform-es2015-block-scoping.md)
+5. [block-scoped-functions](/plugins/transform-es2015-block-scoped-functions.md)
+

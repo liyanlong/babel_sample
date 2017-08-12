@@ -12,7 +12,9 @@ npm install --save-dev babel-plugin-transform-es2015-arrow-functions
 
 ```json
 {
-  "plugins": ["transform-es2015-arrow-functions", /* options */ {"spec": true}]
+  "plugins": [
+      ["transform-es2015-arrow-functions", /* options */ {"spec": true}]
+  ]
 }
 ```
 
@@ -30,7 +32,7 @@ babel --plugins transform-es2015-arrow-functions script.js
   });
 ```
 
-## 配置参数
+## 配置
 
 ### spec
 `boolean`, 默认为 `false`
@@ -39,8 +41,8 @@ spec 为 `ture`，严格检查绑定的this是否与内置的this一致，运行
 
 
 ## 案例
-**配置**
 
+**配置**
 ```json
 {
   "plugins": ["transform-es2015-arrow-functions"]
