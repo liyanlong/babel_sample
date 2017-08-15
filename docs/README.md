@@ -73,4 +73,4 @@ console.log(sum1, sum2);
 3. [async-generator-functions](/plugins/syntax-async-generators.md)
 4. [block-scoping](/plugins/transform-es2015-block-scoping.md)
 5. [block-scoped-functions](/plugins/transform-es2015-block-scoped-functions.md)
-
+6. [classes](/plugins/transform-es2015-classes.md)
