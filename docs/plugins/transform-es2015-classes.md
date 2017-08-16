@@ -1,6 +1,6 @@
-# Classes类 ES2015转ES5
+# Class 类 ES2015转ES5
 
-> 
+> Compile ES2015 classes to ES5
 
 ## 注意事项
 
