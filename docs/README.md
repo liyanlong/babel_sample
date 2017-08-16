@@ -74,3 +74,4 @@ console.log(sum1, sum2);
 4. [block-scoping](/plugins/transform-es2015-block-scoping.md)
 5. [block-scoped-functions](/plugins/transform-es2015-block-scoped-functions.md)
 6. [classes](/plugins/transform-es2015-classes.md)
+7. [classes-properties](/plugins/transform-class-properties.md)
