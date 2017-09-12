@@ -20,3 +20,6 @@
 
 ## transform-class-properties
 [类属性转换](/plugins/transform-class-properties.md)
+
+## computed-property-names
+[计算属性名称](/plugins/computed-property-names.md)
