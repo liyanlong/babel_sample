@@ -1,3 +1,7 @@
 {
+  "presets": [
+    // default without options runs all behavior is babel-preset-latest
+    ["env"]
+  ],
   "plugins": ["transform-es2015-block-scoping"]
 }

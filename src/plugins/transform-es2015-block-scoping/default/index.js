@@ -1,3 +1,10 @@
+let j = '';
 for (let i = 0; i < 5; i++) {
-  setTimeout(() => console.log(i), 1);
+  let j = i + 1;
+  setTimeout(() => {
+    let j = i - 1;
+    console.log(i , j);
+  }, 1);
+  console.log(j);
 }
+console.log(j);

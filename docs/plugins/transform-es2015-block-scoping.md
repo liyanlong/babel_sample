@@ -13,7 +13,7 @@ npm install --save-dev babel-plugin-transform-es2015-block-scoping
 {
   "plugins": [
     ["babel-plugin-transform-es2015-block-scoping", /*options*/ {
-     "throwIfClosureRequired": true
+     "throwIfClosureRequired": false
     }]
   ]
 }
@@ -37,4 +37,72 @@ require("babel-core").transform("code", {
 
 default: `false`
 
-如果设置为`true`, 如果出现let,const 但是并没有闭包作用域块,则抛出异常. 不会转换let ,const块的功能
+如果设置为`true`, 如果出现let,const 但是并没有闭包作用域块,则抛出异常. 
+
+### throwIfClosureRequired
+
+#### false
+
+**编译前**
+```javascript
+let j = '';
+for (let i = 0; i < 5; i++) {
+  let j = i + 1;
+  setTimeout(() => {
+    let j = i - 1;
+    console.log(i , j);
+  }, 1);
+  console.log(j);
+}
+console.log(j);
+```
+
+**编译后**
+```javascript
+'use strict';
+
+var j = '';
+
+var _loop = function _loop(i) {
+  var j = i + 1;
+  setTimeout(function () {
+    var j = i - 1;
+    console.log(i, j);
+  }, 1);
+  console.log(j);
+};
+
+for (var i = 0; i < 5; i++) {
+  _loop(i);
+}
+console.log(j);
+```
+
+
+#### true 
+**编译前**
+```javascript
+for (let i = 0; i < 5; i++) {
+  let foo = 'hello world';
+  (function (j) {
+    let foo = 'hi';
+    console.log(foo);
+    setTimeout(() => console.log(j), 1);
+  }(i));
+}
+```
+**编译后**
+```javascript
+'use strict';
+
+for (var i = 0; i < 5; i++) {
+  var foo = 'hello world';
+  (function (j) {
+    var foo = 'hi';
+    console.log(foo);
+    setTimeout(function () {
+      return console.log(j);
+    }, 1);
+  })(i);
+}
+```
