@@ -22,4 +22,7 @@
 [类属性转换](/plugins/transform-class-properties.md)
 
 ## computed-property-names
-[计算属性名称](/plugins/computed-property-names.md)
+[计算属性名称](/plugins/transform-es2015-computed-properties.md)
+
+## check-es2015-constants
+[常量定义](/plugins/check-es2015-constants.mds)

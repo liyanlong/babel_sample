@@ -1,6 +1,8 @@
 # 计算属性名称
 > computed properties transform, 将对象的属性转换成ES5的`defineProperty`定义属性
 
+**传统的定义对象属性，不允许直接在对象定义时赋予动态key, 使用`transform-es2015-computed-properties` 后将支持动态设置对象的属性`key`**
+
 ## 安装
 
 ```bash
@@ -10,9 +12,12 @@ npm install --save-dev babel-plugin-transform-es2015-computed-properties
 ## 配置
 
 **loose**
-`boolean` default `false`
 
 是否使用使用简单的赋值而不是定义
+
+variable: `boolean`
+
+default：`false`
 
 ## 使用
 
@@ -21,9 +26,10 @@ npm install --save-dev babel-plugin-transform-es2015-computed-properties
 {
   "plugins": ["transform-es2015-computed-properties"]
 }
-
+```
 or
 
+```json
 {
   "plugins": [
     ["transform-es2015-computed-properties", {
@@ -72,5 +78,3 @@ var bar = "_1";
 
 var obj = (_obj = {}, _defineProperty(_obj, "x" + foo, "heh"), _defineProperty(_obj, "y" + bar, "noo"), _defineProperty(_obj, "foo", foo), _defineProperty(_obj, "bar", bar), _obj);
 ```
-
-**PS：传统的定义对象属性，不允许直接在对象定义时赋予动态key**
