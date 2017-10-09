@@ -30,6 +30,7 @@ let Bar = function (_Foo) {
     return _possibleConstructorReturn(this, _Foo.apply(this, arguments));
   }
 
+  // 实例方法
   Bar.prototype.bar = function bar() {
     // will throw an error when this method is defined
   };
